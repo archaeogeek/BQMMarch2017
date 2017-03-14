@@ -6,8 +6,8 @@
 
 		<title>Template Servers- making iSIC deployment simple</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Template Servers- making iSIC deployment simple">
+		<meta name="author" content="Jo">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -16,6 +16,7 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -48,33 +49,40 @@
 					</p>
 				</section>
 
-				<section>
+				
+				<section data-background-image="./images/why.jpg" class="full">
 					<h2>Why?</h2>
 					<p class="fragment">To make it as easy as possible to deploy new iSIC implementations, saving time for developers and the delivery team</p>
+					<small class="fragment">iSIC = iShare in <strike>da</strike> the Cloud \m/</small>
 				</section>
 
-				<section>
+				<section data-background-image="./images/users.jpg" class="full">
 					<h2>How?</h2>
 					<p class="fragment">User stories to talk through pain-points for Devs, Delivery, PM, Boss, Client</p>
 					<small class="fragment">(in no particular order)</small>
 				</section>
 
-				<section>
+				<section data-background-image="./images/aim.jpg" class="full">
 					<h2>Aim</h2>
 					<p class="fragment">Pre-configure as much as possible in the template servers, so that deployment is quick and painless</p>
 				</section>
 
-				<section>
+				<section data-background-image="./images/what.jpg" class="full">
 					<h2>What?</h2>
 					<p class="fragment">iShareMaps and GIS now on separate servers, iShareMaps now on a single server (*), SDW templates for PostGIS 1.5 and 2.2</p>
 					<small class="fragment">More on this later</small>
 				</section>
 
 				<section>
+					<img src="./images/diag.jpg">
+				</section>
+
+				<section data-background-image="./images/major.jpg" class="full">
 					<h2>Major Design Changes</h2>
 					<p class="fragment">No version numbers or client names <strong>anywhere</strong></p>
 					<p class="fragment">All customer-specific configuration is on the data drive and symlinked from the standard locations</p>
 				</section>
+
 
 				<section>
 					<h2>Data</h2>
@@ -103,20 +111,20 @@
 					<p class="fragment">QGIS and other utility software installed</p>
 				</section>
 
-				<section>
+				<section data-background-image="./images/alarm.jpg" class="full">
 					<h2>Techy stuff</h2>
 					<p class="fragment">Amazon CloudWatch alarms set up for monitoring disk drives, memory, performance</p>
 					<p class ="fragment">Disk quotas for all drives, with email notification</p>
 				</section>
 
-				<section>
+				<section data-background-image="./images/delivery.jpg" class="full">
 					<h2>Delivery Tasks</h2>
 					<p class="fragment">"Personalise"- download correct AddressBase, set ADS endpoints, set extents for maps</p>
 					<p class="fragment">"Secure"- change defaults passwords and add client users</p>
 					<p class="fragment">Currently some minor yak-shaving to connect to SDW and set identifiable machine name</p>
 				</section>
 
-				<section>
+				<section data-background-image="./images/cake.jpg" class="full">
 					<h2>Upgrades</h2>
 					<p class="fragment">Piece of cake with Jon's new script!</p>
 					<p class="fragment">With configuration on a separate drive there's also the option of spinning up an entirely new server and attaching the old data drive as a new volume (*)</p>
@@ -131,17 +139,12 @@
 					<p class="fragment">Repository for data/config?</p>
 				</section>
 
-				<section>
+				<section data-background-image="./images/help.jpg" class="full">
 					<h2>HALP!!!!!</h2>
 					<p class="fragment">Documentation available</p>
 					<p class="fragment">Submit jira issues in case of problems</p>
 					<p class="fragment">Ask me :-)</p>
 				</section>
-
-
-
-
-
 				
 			</div>
 
@@ -158,6 +161,8 @@
 				progress: true,
 				history: true,
 				center: true,
+				width: 960,
+    			height: 700,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
